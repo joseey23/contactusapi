@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
+const cors = require("cors");
 
 const app = express();
 const port = 3000; // You can change this to your desired port number
@@ -9,6 +10,7 @@ const port = 3000; // You can change this to your desired port number
 // app.use(bodyParser.urlencoded({ extended: false }));
 // app.use(bodyParser.json());
 app.use(express.json());
+app.use(cors());
 app.get("/", (req, res) => {
   res.json({ message: "Hello World!" });
 });
