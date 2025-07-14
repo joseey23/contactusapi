@@ -27,14 +27,18 @@ app.post("/submit-form", (req, res) => {
     service: "Gmail", // Change this to your email service provider
     auth: {
       user: "josephmaruria@gmail.com", // Change this to your email address
-      pass: "ofeeommzqwsfxmps", // Change this to your email password
+      pass: "pkchatfzjxjqnuqk", // Change this to your email password
     },
   });
 
   // Email message options
   const mailOptions = {
     from: "info@paysokosystems.com", // Change this to your website's email address
-    to: ["josephmaruria@gmail.com", "gamala@paysokosystems.com"], // Change this to your desired email address
+    to: [
+      "josephmaruria@gmail.com",
+      "juliet.wamuyu@paysokosystems.com",
+      "info@paysokosystems.com",
+    ], // Change this to your desired email address
     subject: "New Message from PaySoko Systems Contact Form",
     text: `
       Full Name: ${fullname}
