@@ -58,11 +58,10 @@ app.post("/submit-form", (req, res) => {
       console.error("Error sending email:", error);
       res
         .status(500)
-        .send("Oops! Something went wrong. Please try again later.");
+        .json({ message: "Oops! Something went wrong. Please try again later."});
     } else {
-      console.log("Email sent:", info.response);
-      res.send(
-        "Thank you for contacting PaySoko Systems Inc. One of our agents will review your message and contact you shortly!"
+      res.json(
+        { message: "Thank you for contacting PaySoko Systems Inc. One of our agents will review your message and contact you shortly!"}
       );
     }
   });
@@ -110,11 +109,11 @@ app.post("/request-demo", (req, res) => {
       console.error("Error sending email:", error);
       res
         .status(500)
-        .send("Oops! Something went wrong. Please try again later.");
+        .json({ message: "Oops! Something went wrong. Please try again later."});
     } else {
       console.log("Email sent:", info.response);
-      res.send(
-        "Thank you for contacting PaySoko Systems Inc. One of our agents will review your message and contact you shortly!"
+      res.json(
+        { message: "Thank you for contacting PaySoko Systems Inc. One of our agents will review your message and contact you shortly!"}
       );
     }
   });
