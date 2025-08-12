@@ -38,6 +38,9 @@ app.post("/submit-form", (req, res) => {
       "josephmaruria@gmail.com",
       "juliet.wamuyu@paysokosystems.com",
       "info@paysokosystems.com",
+      "mosesk@paysokosystems.com",
+      "michaelc@paysokosystems.com",
+      "petem@paysokosystems.com",
     ], // Change this to your desired email address
     subject: "New Message from PaySoko Systems Contact Form",
     text: `
