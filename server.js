@@ -69,7 +69,7 @@ app.post("/submit-form", (req, res) => {
 });
 
 app.post("/request-demo", (req, res) => {
-  const { companyName, jobTitle, firstName, lastName, country, phoneNumber, inquiry } = req.body;
+  const { companyName, jobTitle, firstName, lastName, country, phoneNumber, inquiry, organizationType } = req.body;
 
   // Create a Nodemailer transporter
   const transporter = nodemailer.createTransport({
@@ -100,6 +100,7 @@ app.post("/request-demo", (req, res) => {
       Country: ${country}
       Phone Number: ${phoneNumber}
       Inquiry: ${inquiry}
+      Organization Type: ${organizationType}
     `,
   };
 
