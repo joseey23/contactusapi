@@ -37,7 +37,6 @@ app.post("/submit-form", (req, res) => {
     to: [
       "josephmaruria@gmail.com",
       "juliet.wamuyu@paysokosystems.com",
-      "info@paysokosystems.com",
       "mosesk@paysokosystems.com",
       "michaelc@paysokosystems.com",
       "petem@paysokosystems.com",
@@ -96,7 +95,6 @@ app.post("/request-demo", (req, res) => {
     to: [
       "josephmaruria@gmail.com",
       "juliet.wamuyu@paysokosystems.com",
-      "info@paysokosystems.com",
       "mosesk@paysokosystems.com",
       "michaelc@paysokosystems.com",
       "petem@paysokosystems.com",
