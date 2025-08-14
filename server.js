@@ -26,8 +26,8 @@ app.post("/submit-form", (req, res) => {
   const transporter = nodemailer.createTransport({
     service: "Gmail", // Change this to your email service provider
     auth: {
-      user: "josephmaruria@gmail.com", // Change this to your email address
-      pass: "pkchatfzjxjqnuqk", // Change this to your email password
+      user: "info@paysokosystems.com", // Change this to your email address
+      pass: "xfyfylfititfsfns", // Change this to your email password
     },
   });
 
@@ -42,7 +42,7 @@ app.post("/submit-form", (req, res) => {
       "michaelc@paysokosystems.com",
       "petem@paysokosystems.com",
     ], // Change this to your desired email address
-    subject: "New Message from PaySoko Systems Contact Form",
+    subject: "PaySoko Systems Contact Form",
     text: `
       Full Name: ${fullname}
       Email: ${email}
@@ -56,26 +56,37 @@ app.post("/submit-form", (req, res) => {
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       console.error("Error sending email:", error);
-      res
-        .status(500)
-        .json({ message: "Oops! Something went wrong. Please try again later."});
+      res.status(500).json({
+        message: "Oops! Something went wrong. Please try again later.",
+      });
     } else {
-      res.json(
-        { message: "Thank you for contacting PaySoko Systems Inc. One of our agents will review your message and contact you shortly!"}
-      );
+      res.json({
+        message:
+          "Thank you for contacting PaySoko Systems Inc. One of our agents will review your message and contact you shortly!",
+      });
     }
   });
 });
 
 app.post("/request-demo", (req, res) => {
-  const { companyName, jobTitle, firstName, lastName, country, phoneNumber, inquiry, organizationType } = req.body;
+  const {
+    companyName,
+    jobTitle,
+    firstName,
+    lastName,
+    country,
+    phoneNumber,
+    inquiry,
+    organizationType,
+    email,
+  } = req.body;
 
   // Create a Nodemailer transporter
   const transporter = nodemailer.createTransport({
     service: "Gmail", // Change this to your email service provider
     auth: {
-      user: "josephmaruria@gmail.com", // Change this to your email address
-      pass: "pkchatfzjxjqnuqk", // Change this to your email password
+      user: "info@paysokosystems.com", // Change this to your email address
+      pass: "xfyfylfititfsfns", // Change this to your email password
     },
   });
 
@@ -90,7 +101,7 @@ app.post("/request-demo", (req, res) => {
       "michaelc@paysokosystems.com",
       "petem@paysokosystems.com",
     ], // Change this to your desired email address
-    subject: "New Message from PaySoko Systems Request Demo Form",
+    subject: "PaySoko Systems Request Demo Form",
     text: `
       Company Name: ${companyName}
       Job Title: ${jobTitle}
@@ -100,6 +111,7 @@ app.post("/request-demo", (req, res) => {
       Phone Number: ${phoneNumber}
       Inquiry: ${inquiry}
       Organization Type: ${organizationType}
+      Email: ${email}
     `,
   };
 
@@ -107,14 +119,15 @@ app.post("/request-demo", (req, res) => {
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       console.error("Error sending email:", error);
-      res
-        .status(500)
-        .json({ message: "Oops! Something went wrong. Please try again later."});
+      res.status(500).json({
+        message: "Oops! Something went wrong. Please try again later.",
+      });
     } else {
       console.log("Email sent:", info.response);
-      res.json(
-        { message: "Thank you for contacting PaySoko Systems Inc. One of our agents will review your message and contact you shortly!"}
-      );
+      res.json({
+        message:
+          "Thank you for contacting PaySoko Systems Inc. One of our agents will review your message and contact you shortly!",
+      });
     }
   });
 });
