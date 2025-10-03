@@ -93,11 +93,12 @@ app.post("/request-demo", (req, res) => {
   const mailOptions = {
     from: "info@paysokosystems.com", // Change this to your website's email address
     to: [
-      "josephmaruria@gmail.com",
-      "juliet.wamuyu@paysokosystems.com",
-      "mosesk@paysokosystems.com",
-      "michaelc@paysokosystems.com",
-      "petem@paysokosystems.com",
+      // "josephmaruria@gmail.com",
+      // "juliet.wamuyu@paysokosystems.com",
+      // "mosesk@paysokosystems.com",
+      // "michaelc@paysokosystems.com",
+      // "petem@paysokosystems.com",
+      "niplugkenya@gmail.com",
     ], // Change this to your desired email address
     subject: "PaySoko Systems Request Demo Form",
     text: `
