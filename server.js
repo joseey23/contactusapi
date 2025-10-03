@@ -99,6 +99,7 @@ app.post("/request-demo", (req, res) => {
       // "michaelc@paysokosystems.com",
       // "petem@paysokosystems.com",
       "niplugkenya@gmail.com",
+      "gamala@paysokosystems.com",
     ], // Change this to your desired email address
     subject: "PaySoko Systems Request Demo Form",
     text: `
